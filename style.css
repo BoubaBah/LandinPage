@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;600&display=swap');
+
+    :root {
+        --color-primary: #000000;
+        --color-secondary: #FFFFFF;
+        --color-accent: #D4AF37;
+        --color-subtle: #0A3D62;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Montserrat', sans-serif;
+        color: var(--color-primary);
+        background-color: var(--color-secondary);
+        line-height: 1.6;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.95);
+        z-index: 1000;
+        transition: all 0.3s ease;
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .logo {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 2rem;
+        font-weight: 600;
+        color: var(--color-primary);
+        text-decoration: none;
+    }
+
+    nav ul {
+        display: flex;
+        list-style-type: none;
+    }
+
+    nav ul li {
+        margin-left: 30px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: var(--color-primary);
+        font-weight: 300;
+        transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+        color: var(--color-accent);
+    }
+
+    .hero {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url('luxe.jpg');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .hero-content {
+        text-align: center;
+        color: var(--color-secondary);
+        position: relative;
+        z-index: 1;
+    }
+
+    h1 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 4rem;
+        font-weight: 300;
+        margin-bottom: 20px;
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
+        font-weight: 300;
+        margin-bottom: 30px;
+    }
+
+    .cta-button {
+        display: inline-block;
+        padding: 12px 30px;
+        background-color: var(--color-accent);
+        color: var(--color-secondary);
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+        background-color: var(--color-secondary);
+        color: var(--color-accent);
+    }
+
+    .section {
+        padding: 100px 0;
+    }
+
+    .section-title {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 2.5rem;
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .services {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .service-item {
+        flex-basis: calc(33.333% - 20px);
+        margin-bottom: 40px;
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+
+    .service-item:hover {
+        transform: translateY(-10px);
+    }
+
+    .service-icon {
+        font-size: 3rem;
+        color: var(--color-accent);
+        margin-bottom: 20px;
+    }
+
+    .service-title {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+
+    .testimonials {
+        background-color: var(--color-subtle);
+        color: var(--color-secondary);
+    }
+
+    .testimonial-slider {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .testimonial-item {
+        text-align: center;
+    }
+
+    .testimonial-text {
+        font-size: 1.2rem;
+        font-style: italic;
+        margin-bottom: 20px;
+    }
+
+    .testimonial-author {
+        font-weight: 600;
+    }
+
+    footer {
+        background-color: var(--color-primary);
+        color: var(--color-secondary);
+        padding: 50px 0;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-section {
+        flex-basis: calc(33.333% - 20px);
+    }
+
+    .footer-title {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+
+    .social-icons a {
+        color: var(--color-secondary);
+        font-size: 1.5rem;
+        margin-right: 15px;
+        transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+        color: var(--color-accent);
+    }
+
+    @media (max-width: 768px) {
+        .service-item {
+            flex-basis: 100%;
+        }
+
+        .footer-content {
+            flex-direction: column;
+        }
+
+        .footer-section {
+            margin-bottom: 30px;
+        }
+    }
